@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<script src="fibonacci.js" type="text/javascript"></script>    
+    </head>
+    <body>
+    	<div> ASM
+    		<span id="fibo1"></span>
+    	</div>
+    	<div> JS
+    		<span id="fibo2"></span>
+    	</div>
+	</body>
+	<script>
+		rank = 42
+		var curr = new Date();
+		var res = ModuleSpeedFibo().fibo(rank);
+		var dur = new Date() - curr;
+		document.getElementById("fibo1").innerHTML = res + " in " + dur + " ms.";
+
+		var curr = new Date();
+		var res = ModuleJSibo().fibo(rank);
+		var dur = new Date() - curr;
+		document.getElementById("fibo2").innerHTML = res + " in " + dur + " ms.";
+		
+	</script>
+</html>
